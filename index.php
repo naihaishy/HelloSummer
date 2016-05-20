@@ -8,7 +8,7 @@
             <?php the_excerpt(); ?>
             <p class="postmetadata">
                 <?php _e('Sorted under&#58;'); ?><?php the_category(', ') ?>
-                <?php _e('by'); ?> <?php  the_author(); ?><br />
+                <?php _e('by'); ?>  <?php  the_author_posts_link(); ?> <br/>
                 <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
                 <?php edit_post_link('Edit', ' &#124; ', ''); ?>
             </p>
@@ -33,5 +33,5 @@
 
 
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

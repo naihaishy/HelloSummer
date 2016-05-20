@@ -8,8 +8,8 @@
           <?php the_content(); ?>
           <?php link_pages('<p><strong>Pages:</strong>', '</p>', 'number'); ?>
           <p class="postmetadata">
-              <?php _e('Filed under&#58;'); ?><?php the_category(', ') ?>
-              <?php _e('by'); ?> <?php  the_author(); ?>
+              <?php _e('Sorted under&#58;'); ?><?php the_category(', ') ?>
+              <?php _e('by'); ?>  <?php  the_author_posts_link(); ?> <br/>
               <?php edit_post_link('Edit', ' &#124; ', ''); ?>
           </p>
         </div>
@@ -32,8 +32,4 @@
   <?php endif; ?>
 </div>
 
-
-
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
