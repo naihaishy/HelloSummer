@@ -1,6 +1,6 @@
-/*
+          /*
 
-Theme Name: Naihai
+Theme Name: HelloSummer
 Theme URI: http://www.zhfsky.com
 Description: This is my first theme.
 Version: 0.0.1
@@ -11,5 +11,125 @@ Author: Naihai
 @import url('bootstrap/css/bootstrap.css');
 @import url('bootstrap/css/bootstrap-responsive.css');
 
+body{
+  background-color: #fafafa;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Microsoft Yahei;
+}
 
- 
+img{
+  height: auto;
+  max-width: 100%;
+  display: block;
+  align-content: center;
+}
+
+.container-fluid{
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.homepage a {
+  color: #000;
+  text-decoration: none;
+  }	/* 鼠标移动到链接上 */
+.homepage a:hover {
+
+  text-decoration: underline;;
+  }	/* 鼠标移动到链接上 */
+
+.navigation a {
+  color: #000;
+  text-decoration: none;
+}	/* 鼠标移动到链接上 *
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*comments styles*/
+
+
+.comments-wrapper {
+	background-color:#fff;
+	box-shadow:0 0 0 1px rgba(0,0,0,.05);
+	padding:20px 0
+}
+.comment-form p {
+	margin-bottom:15px
+}
+.comment-form input[type=text],.comment-form textarea {
+	width:100%;
+	border:1px solid rgba(0,0,0,.05);
+	resize:none;
+	box-sizing:border-box;
+	padding:10px;
+	border-radius:3px
+}
+.comment-form .submit {
+	border:1px solid #FE9600;
+	color:#FE9600;
+	display:inline-block;
+	border-radius:3px;
+	background-color:#fff;
+	padding:5px 20px;
+	cursor:pointer
+}
+.comment-body {
+	padding:15px 0;
+	border-bottom:1px dotted rgba(0,0,0,.05);
+	font-size:14px;
+	position:relative
+}
+.comment-body .says {
+	display:none
+}
+.comment-body .comment-author {
+	line-height:1.1;
+	color:#FE9600
+}
+.comment-body .comment-author .avatar {
+	float:left;
+	border-radius:100%;
+	margin-right:10px
+}
+.comment-body .comment-meta {
+	font-size:12px;
+	color:rgba(0,0,0,.3)
+}
+.comment-body .comment-reply-link {
+	color:#fff;
+	background-color:#FE9600;
+	position:absolute;
+	right:0;
+	top:20px;
+	border-radius:3px;
+	font-size:12px;
+	padding:0 8px
+}
+.comment-respond {
+	padding:20px 0
+}
+.comment-respond .comment-reply-title {
+	font-size:18px;
+	color:rgba(0,0,0,.44);
+	margin-bottom:15px
+}
+.commentnav {
+	text-align:center;
+	padding:25px 0;
+	color:rgba(0,0,0,.44)
+}
+.commentnav .page-numbers {
+	padding:0 5px
+}

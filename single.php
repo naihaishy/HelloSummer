@@ -1,35 +1,48 @@
-<?php get_header(); ?>
-<div class="container-fluid">
-  <?php if(have_posts()): ?>
-    <?php while(have_posts()):the_post(); ?>
-      <div class="post container" id="post-<?php the_ID(); ?>">
-        <h3><a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a></h3>
-        <div class="entry col-md-12">
-          <?php the_content(); ?>
-          <?php link_pages('<p><strong>Pages:</strong>', '</p>', 'number'); ?>
-          <p class="postmetadata">
-              <?php _e('Sorted under&#58;'); ?><?php the_category(', ') ?>
-              <?php _e('by'); ?>  <?php  the_author_posts_link(); ?> <br/>
-              <?php edit_post_link('Edit', ' &#124; ', ''); ?>
-          </p>
-        </div>
-        <div class="comments-template col-md-12">
-          <?php comments_template(); ?>
-        </div>
+<?php get_header(''); ?>
+<div class="container-fluid"  style="width:100%;padding:0;">
+  <div class="post-single container" id="post-<?php the_ID(); ?>" style="width:90%;padding:0;">
+    <?php if(have_posts()): ?>
+      <?php while(have_posts()):the_post(); ?>
 
+          <h3 class="block-title"><?php the_title();?></h3>
+            <div class="entry col-md-12">
+              <?php the_content(); ?>
+
+              <div class="postmetadata col-md-12">
+                  <?php _e('分类'); ?><span style="color:green;"><?php the_category(', ') ?></span>
+                  <?php _e('作者'); ?>  <?php  the_author_posts_link(); ?>
+                  <?php edit_post_link('编辑', ' &#124; ', ''); ?>
+              </div>
+            </div>
+
+
+    </div>
+
+
+    <?php endwhile; ?>
+    <?php endif; ?>
+      <div class="container-fluid">
+          <nav>
+            <nav>
+            <ul class="pager">
+              <li class="previous"> <?php previous_post_link('%link') ?>  </li>
+              <li class="next"> <?php next_post_link('%link') ?> </li>
+            </ul>
+          </nav>
       </div>
 
 
-  <?php endwhile; ?>
-  <div class="navigation col-md-12">
-  <?php previous_post_link('%link') ?> <?php next_post_link('%link') ?>
-  </div>
 
-<?php else:?>
-  <div class="post col-md-12">
-    <h2><?php _e('Not Found');?></h2>
-  </div>
-  <?php endif; ?>
+
+    <div class="comments-wrapper col-md-12"  >
+      <?php comments_template(); ?>
+    </div>
+
+
+
 </div>
+
+<div class="container-fluid  " style="width:100%;heigth:30px;"></div>
+
 
 <?php get_footer(); ?>

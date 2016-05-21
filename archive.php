@@ -18,7 +18,7 @@
 
   <?php endwhile; ?>
   <div class="navigation col-md-12">
-    <?php posts_nav_link('Current','Before','After');?>
+    <?php posts_nav_link('Current Page','Previous Page','Next Page');?>
   </div>
 
 
@@ -30,5 +30,5 @@
   <?php endif; ?>
 </div>
 
- 
+
 <?php get_footer(); ?>
